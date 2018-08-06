@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_margin="8dp">
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+      android:id="@+id/article_img"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+    <TextView
+      android:id="@+id/article_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="18dp"
+      android:maxLines="1"
+      android:textStyle="bold"
+      android:textSize="20dp"/>
+
+    <TextView
+      android:id="@+id/article_date"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="4dp"
+      android:textColor="@color/article_date_color"
+      android:textStyle="italic"/>
+
+    <TextView
+      android:id="@+id/article_description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="20dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="8dp"
+      android:maxLines="4"/>
+
+    <CheckBox
+      android:id="@+id/article_checkbox"
+      android:text="@string/add_to_favorites"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginBottom="8dp"/>
+
+    <Button
+      android:id="@+id/article_button"
+      android:layout_width="@dimen/remove_from_favorite_w"
+      android:layout_height="@dimen/remove_from_favorite_h"
+      android:layout_marginLeft="16dp"
+      android:layout_marginBottom="8dp"
+      android:text="@string/remove_from_favorite"
+      android:textColor="@color/white"
+      android:background="@drawable/round_button"
+      android:visibility="gone"
+      tools:visibility="visible"/>
+
+  </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

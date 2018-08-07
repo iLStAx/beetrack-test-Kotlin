@@ -22,21 +22,17 @@ class FavoritesFragment : Fragment(), CheckboxListener {
 
   override fun removeFromFavorites(article: Article) {
     favoritesViewModel.removeFromFavorites(article)
-    toast.setText("Article was removed from favorites")
-    toast.duration = Toast.LENGTH_SHORT
-    toast.show()
+    Toast.makeText(context, "Article was removed from favorites", Toast.LENGTH_LONG).show();
   }
 
   private lateinit var favoritesViewModel: FavoritesViewModel
   private lateinit var adapter : FavoritesAdapter
-  private lateinit var toast: Toast
 
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                             savedInstanceState: Bundle?): View? {
     val view = inflater.inflate(R.layout.favorites_fragment, container, false)
     val recyclerView : RecyclerView = view.findViewById(R.id.recycler_view)
-    toast = Toast(context)
     adapter = FavoritesAdapter(this)
     recyclerView.adapter  = adapter
     return view
